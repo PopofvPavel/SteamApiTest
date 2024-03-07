@@ -16,7 +16,7 @@ public class GameController {
     }
 
     @GetMapping("/game/{appId}")
-    public String getGameDescription(@PathVariable long appId) {
+    public SteamGame getGameDescription(@PathVariable long appId) {
         return steamApiClient.getGameDescription(appId);
     }
 }
